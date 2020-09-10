@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Solution {
     public static void main(String[] args) {
-        //主对角线旋转然后互换行
+
         Solution solution=new Solution();
         int[][] ns = {
                 { 1,2,3 },
@@ -27,6 +27,7 @@ public class Solution {
     }
 
     public void rotate(int[][] matrix) {
+        //主对角线旋转然后互换行
         int len=matrix.length;
         int t;
         int i;
