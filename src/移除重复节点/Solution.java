@@ -1,6 +1,5 @@
 package 移除重复节点;
 
-import javax.sound.midi.Soundbank;
 import java.util.*;
 
 public class Solution {
@@ -55,6 +54,65 @@ public class Solution {
             // System.out.println(key + " = " + value);
         }
         return q;
+    }
+
+    //set方法
+    public ListNode removeDuplicateNodes2(ListNode head){
+        Set<Integer> set = new HashSet<>();
+        ListNode cur = head;
+        while (cur != null && cur.next != null) {
+            set.add(cur.val);
+            if (set.contains(cur.next.val))
+                cur.next = cur.next.next;
+            else
+                cur = cur.next;
+        }
+        return head;
+
+// 作者：sdwwld
+// 链接：https://leetcode-cn.com/problems/remove-duplicate-node-lcci/solution/javade-4chong-xie-fa-bao-gua-di-gui-wei-yun-suan-b/
+// 来源：力扣（LeetCode）
+// 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+//        if(head==null){
+//            return head;
+//        }
+//        Set<Integer> set = new HashSet<>();
+//        ListNode p = head;
+//        set.add(p.val);
+//        while(p.next!=null){
+//            if(set.contains(p.next.val)){
+//                p.next=p.next.next;
+//            }else{
+//                p=p.next;
+//                set.add(p.val);
+//            }
+//        }
+//        return head;
+    }
+
+
+    //双指针
+    public ListNode removeDuplicateNodes3(ListNode head){
+        ListNode p=head;
+        while(p!=null)
+        {
+            ListNode q=p;
+            while(q.next!=null)
+            {
+                if(q.next.val==p.val){//特别注意这个条件
+                    q.next=q.next.next;
+                }else{
+                    q=q.next;
+                }
+            }
+            p=p.next;
+        }
+        return head;
+//
+//        作者：sdwwld
+//        链接：https://leetcode-cn.com/problems/remove-duplicate-node-lcci/solution/javade-4chong-xie-fa-bao-gua-di-gui-wei-yun-suan-b/
+//        来源：力扣（LeetCode）
+//        著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
     }
 
 }
