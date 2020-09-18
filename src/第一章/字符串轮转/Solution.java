@@ -1,7 +1,4 @@
-package 字符串轮转;
-
-import java.lang.reflect.Array;
-import java.util.Arrays;
+package 第一章.字符串轮转;
 
 public class Solution {
     public static void main(String[] args) {
