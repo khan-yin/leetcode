@@ -1,6 +1,6 @@
-package 回文链表;
+package 第二章.回文链表;
 
-import 移除重复节点.ListNode;
+import 第二章.移除重复节点.ListNode;
 
 public class Solution {
     //反转链表
