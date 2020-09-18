@@ -1,6 +1,6 @@
-package 链表求和;
+package 第二章.链表求和;
 
-import 移除重复节点.ListNode;
+import 第二章.移除重复节点.ListNode;
 
 import java.math.BigInteger;
 
