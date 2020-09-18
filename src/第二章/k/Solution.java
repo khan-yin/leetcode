@@ -1,10 +1,9 @@
-package k;
+package 第二章.k;
 
-import 移除重复节点.ListNode;
+import 第二章.移除重复节点.ListNode;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Stack;
 
 public class Solution {
     public static void main(String[] args) {
