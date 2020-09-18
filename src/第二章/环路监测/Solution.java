@@ -1,6 +1,6 @@
-package 环路监测;
+package 第二章.环路监测;
 
-import 移除重复节点.ListNode;
+import 第二章.移除重复节点.ListNode;
 
 public class Solution {
     //双指针牛逼
