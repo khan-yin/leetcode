@@ -1,6 +1,6 @@
-package 分割链表;
+package 第二章.分割链表;
 
-import 移除重复节点.ListNode;
+import 第二章.移除重复节点.ListNode;
 
 public class Solution {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package 移除重复节点;
+package 第二章.移除重复节点;
 
 import java.util.*;
 
