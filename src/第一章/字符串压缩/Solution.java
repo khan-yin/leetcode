@@ -1,4 +1,4 @@
-package 字符串压缩;
+package 第一章.字符串压缩;
 
 public class Solution {
     public static void main(String[] args) {
