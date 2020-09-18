@@ -1,4 +1,4 @@
-package 旋转矩阵;
+package 第一章.旋转矩阵;
 
 import java.util.Arrays;
 

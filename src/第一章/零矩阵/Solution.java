@@ -1,6 +1,5 @@
-package 零矩阵;
+package 第一章.零矩阵;
 
-import javax.management.MBeanAttributeInfo;
 import java.util.Arrays;
 
 public class Solution {
