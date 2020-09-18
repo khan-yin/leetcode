@@ -2,7 +2,7 @@ package 栈的最小值;
 
 import java.util.Stack;
 
-public class Solution {
+public class MinStack {
     private Stack<Integer> stack;
 
     private Stack<Integer> minstack;
