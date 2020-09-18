@@ -1,4 +1,4 @@
-package 一次编辑;
+package 第一章.一次编辑;
 
 public class Solution {
     public static void main(String[] args) {

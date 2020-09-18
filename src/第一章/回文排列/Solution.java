@@ -1,4 +1,4 @@
-package 回文排列;
+package 第一章.回文排列;
 
 public class Solution {
     public boolean canPermutePalindrome(String s) {
