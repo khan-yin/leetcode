@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class Solution {
+    //bfs
     public static ListNode[] listOfDepth(TreeNode tree) {
         LinkedList<TreeNode> q = new LinkedList<>();
         ArrayList<ListNode> good = new ArrayList<>();
