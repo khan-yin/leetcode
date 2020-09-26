@@ -10,7 +10,7 @@ public class Solution {
     public void dfs(TreeNode root, int total) {
 
         if (root == null) {
-            System.out.println("x");
+//            System.out.println("x");
             return;
         } else {
             total += root.val;
@@ -18,7 +18,7 @@ public class Solution {
         System.out.println(total);
         if (total == sum) {
             cnt++;
-            System.out.println("cnt=" + cnt);
+//            System.out.println("cnt=" + cnt);
         }
         dfs(root.left, total);
         dfs(root.right, total);
@@ -45,4 +45,6 @@ public class Solution {
         qianxu(root);
         return this.cnt;
     }
+
+
 }
