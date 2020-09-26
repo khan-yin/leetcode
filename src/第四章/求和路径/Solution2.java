@@ -4,7 +4,30 @@ import 第四章.最小高度树.TreeNode;
 
 public class Solution2 {
     private int cnt = 0;
+    //加法方式
+    private int sum = 0;
 
+    public int pathSum2(TreeNode root, int sum) {
+        this.sum = sum;
+        if (root == null) return 0;
+        dfs(root, 0);
+        pathSum(root.left, sum);
+        pathSum(root.right, sum);
+        return cnt;
+    }
+
+    public void dfs2(TreeNode root, int total) {
+        if (root == null) return;
+        total = total + root.val;
+        // System.out.println(total);
+        if (total == sum)
+            cnt++;
+
+        dfs(root.left, total);
+        dfs(root.right, total);
+    }
+
+    //减法方式
     public int pathSum(TreeNode root, int sum) {
         if (root == null) return 0;
         dfs(root, sum);
