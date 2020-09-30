@@ -17,7 +17,6 @@ public class Solution {
     public int convertInteger2(int A, int B) {
         int k = 0;
         int c = A ^ B;
-        int c = A ^ B;
         while (c != 0) {
             k++;
             c &= (c - 1);
