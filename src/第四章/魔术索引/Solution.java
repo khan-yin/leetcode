@@ -18,6 +18,7 @@ public class Solution {
     }
 
     public int findMagicIndex(int[] nums) {
+        //方法1——直接遍历
         // for(int i=0;i<nums.length;i++)
         // {
         //     if(nums[i]==i)
@@ -25,6 +26,8 @@ public class Solution {
         //         return i;
         //     }
         // }
+
+        //方法2——跳跃减治
         // for(int i=0;i<nums.length;i++)
         // {
         //     if(nums[i]==i)
@@ -33,6 +36,8 @@ public class Solution {
         //         i=nums[i]-1;
         // }
         // return -1;
+
+        //方法3——减治优化
         // for(int i=0;i<nums.length;i++)
         // {
         //     if(nums[i]==i)
@@ -48,6 +53,8 @@ public class Solution {
 
         // }
         // return -1;
+
+        //方法4——二分思想，分治法
         return binary_search(nums, 0, nums.length - 1);
 
 
