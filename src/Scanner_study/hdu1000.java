@@ -1,8 +1,11 @@
 package Scanner_study;
+/**
+ * A + B Problem
+ */
 
 import java.util.Scanner;
 
-public class hdu1001 {
+public class hdu1000 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         while (sc.hasNext()) {

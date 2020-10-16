@@ -1,10 +1,11 @@
 package Scanner_study;
-
-import java.util.Scanner;
-
 /**
  * A + B Problem Too
  */
+
+import java.util.Scanner;
+
+
 public class hdu2101 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

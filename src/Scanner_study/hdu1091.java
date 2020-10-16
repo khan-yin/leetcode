@@ -1,4 +1,7 @@
 package Scanner_study;
+/**
+ * A+B for Input-Output Practice (III)
+ */
 
 import java.util.Scanner;
 
