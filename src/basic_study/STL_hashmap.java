@@ -5,7 +5,6 @@ import java.util.Map;
 
 public class STL_hashmap {
     public static void main(String[] args) {
-
         var s2 = new Student("Xiao Ming", 99);
         Student s = new Student("Xiao Ming", 99);
         Map<String, Student> map = new HashMap<>();
@@ -16,7 +15,6 @@ public class STL_hashmap {
         System.out.println(target.score); // 99
         Student another = map.get("Bob"); // 通过另一个key查找
         System.out.println(another); // 未找到返回null
-
         //遍历key
         Map<String, Integer> map2 = new HashMap<>();
         map2.put("apple", 123);
