@@ -1,10 +1,10 @@
 #include<iostream>
-#inlcude<cstdio>
+#include<cstdio>
 using namespace std;
 
 int N;//the number of cities
 int M;//the number of roads
-int c1
+int c1;
 int c2;
  
 int main()
