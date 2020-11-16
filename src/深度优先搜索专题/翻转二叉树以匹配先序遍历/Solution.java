@@ -1,5 +1,7 @@
 package 深度优先搜索专题.翻转二叉树以匹配先序遍历;
 
+import 第四章.最小高度树.TreeNode;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
