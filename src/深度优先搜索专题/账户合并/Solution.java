@@ -69,9 +69,9 @@ public class Solution {
                         }
                     }
                 }
-                Collections.sort(emailroute);
-                emailroute.add(0,email2owner.get(email));
-                ans.add(emailroute);
+                Collections.sort(emailroute);//按字典排序
+                emailroute.add(0,email2owner.get(email));//在最前面把ownername加入数组当中
+                ans.add(emailroute);//新增一条记录
             }
         }
         return ans;
