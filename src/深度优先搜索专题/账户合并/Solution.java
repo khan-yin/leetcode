@@ -1,14 +1,14 @@
 package 深度优先搜索专题.账户合并;
 
+import java.util.*;
+
 public class Solution {
     public List<List<String>> accountsMerge(List<List<String>> accounts) {
-        HashMap<String,String> email2owner=new HashMap<>();//email映射到owner上
-        HashMap<String,ArrayList<String>> Emailmap= new HashMap<>();//Email之间的相关关系
-        for(List<String> account:accounts)
-        {
-            String owner="";
-            for(String email:account)
-            {
+        HashMap<String, String> email2owner = new HashMap<>();//email映射到owner上
+        HashMap<String, ArrayList<String>> Emailmap = new HashMap<>();//Email之间的相关关系
+        for (List<String> account : accounts) {
+            String owner = "";
+            for (String email : account) {
                 if(owner=="")
                 {
                     owner=email;
