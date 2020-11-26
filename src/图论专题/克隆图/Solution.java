@@ -4,7 +4,7 @@ import 图论专题.Node;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-
+//dfs解法
 public class Solution {
     public HashMap<Node, Node> node_nodecopy = new HashMap<>();
 
