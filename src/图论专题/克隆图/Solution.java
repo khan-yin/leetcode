@@ -4,6 +4,9 @@ import 图论专题.Node;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Queue;
+
 //dfs解法
 public class Solution {
     public HashMap<Node, Node> node_nodecopy = new HashMap<>();
@@ -22,5 +25,30 @@ public class Solution {
 
         return newnode;
 
+    }
+
+
+    public Node cloneGraph_bfs(Node node) {
+        if (node == null)//剪枝
+            return node;
+        HashMap<Node, Node> node_nodecopy = new HashMap<>();
+        Queue<Node> queue = new LinkedList<>();
+        queue.offer(node);
+        node_nodecopy.put(node, new Node(node.val, new ArrayList<Node>()));
+
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                Node temp = queue.remove();
+                for (Node neighbor : temp.neighbors) {
+                    if (!node_nodecopy.containsKey(neighbor)) {
+                        node_nodecopy.put(neighbor, new Node(neighbor.val, new ArrayList<Node>()));
+                        queue.offer(neighbor);
+                    }
+                    node_nodecopy.get(temp).neighbors.add(node_nodecopy.get(neighbor));
+                }
+            }
+        }
+        return node_nodecopy.get(node);
     }
 }
