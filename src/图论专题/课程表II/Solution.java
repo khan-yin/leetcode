@@ -11,6 +11,7 @@ public class Solution {
         HashMap<Integer, ArrayList<Integer>> nodemaplist = new HashMap<>();
         if (numCourses <= 1)
             return true;
+
         int[] enter = new int[numCourses];//入度
         int[] to = new int[numCourses];//出度
         for (int[] courserelation : prerequisites) {
