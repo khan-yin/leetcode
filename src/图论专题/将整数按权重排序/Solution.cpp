@@ -19,7 +19,7 @@ public:
     int getKth(int lo, int hi, int k) {
         vector<int> v;//存储下标
         for(int i=lo;i<=hi;i++) v.push_back(i);
-        //因为题目求下标
+        //因为题目求下标,[&] 表示引用传递捕捉所有父作用域变量 C++11新增了lambda函数
         sort(v.begin(),v.end(),[&](int o1,int o2){
              if (getCount(o1) != getCount(o2)) return getCount(o1) < getCount(o2);
              else return o1 < o2;
