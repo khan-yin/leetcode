@@ -3,52 +3,57 @@
 #include<algorithm>
 #include<vector>
 #include<queue>
-
 using namespace std;
 
-struct Dist {
-    int x, y, z;
-    Dist(int _x, int _y, int _z): x(_x), y(_y), z(_z) {}
-    bool operator< (const Dist& that) const {
-        return z > that.z;
+struct Edge {
+    int start, end, dis;
+    Edge(int _start, int _end, int _dis): start(_start), end(_end), dis(_dis) {}
+    bool operator< (const Edge& that) const {
+        return dis > that.dis;
     }
 };
 
 class Solution {
 private:
-    static constexpr int dirs[4][2] = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
-    
+    int dx[4]={-1,1,0,0};
+    int dy[4]={0,0,-1,1};
+    int h;
+    int w;
 public:
+    //单源最短路问题
     int minimumEffortPath(vector<vector<int>>& heights) {
-        int m = heights.size();
-        int n = heights[0].size();
-        
-        priority_queue<Dist> q;
-        vector<int> seen(m * n);
-        vector<int> dist(m * n, INT_MAX);
-        q.emplace(0, 0, 0);
-        dist[0] = 0;
-        while (!q.empty()) {
-            auto [x, y, z] = q.top();
+        this->h=heights.size();
+        this->w=heights[0].size();
+        vector<int> dist(h*w);
+        vector<bool> isvisted(h*w);
+        priority_queue<Edge> q;
+        q.emplace(0,0,0);
+        dist[0]=0;
+        while(!q.empty())
+        {
+            auto tempEdge=q.top();
+            int start=tempEdge.start;
+            int end=tempEdge.end;
+            int dis=tempEdge.dis;
+
             q.pop();
-            if (seen[x * n + y]) {
+            if(isvisted[start*w+end])//该节点已被访问则跳过
                 continue;
-            }
-            seen[x * n + y] = 1;
-            dist[x * n + y] = z;
-            for (int i = 0; i < 4; ++i) {
-                int nx = x + dirs[i][0];
-                int ny = y + dirs[i][1];
-                if (nx >= 0 && nx < m && ny >= 0 && ny < n && !seen[nx * n + ny]) {
-                    q.emplace(nx, ny, max(z, abs(heights[x][y] - heights[nx][ny])));
-                }
+
+            isvisted[start*w+end]=true;
+            dist[start*w+end]=dis;
+            for(int i=0;i<4;i++)
+            {
+                int nx=start+dx[i];
+                int ny=end+dy[i];
+                if(nx<0||nx>=h||ny<0||ny>=w||isvisted[nx*w+ny])
+                    continue;
+                int minus=abs(heights[start][end]-heights[nx][ny]);
+                dist[nx*w+ny]=max(minus,dis);
+                q.emplace(nx,ny,dist[nx*w+ny]);
             }
         }
-        return dist[m * n - 1];
+        return dist[h * w - 1];
     }
 };
 
-// 作者：zerotrac2
-// 链接：https://leetcode-cn.com/problems/path-with-minimum-effort/solution/zui-xiao-ti-li-xiao-hao-lu-jing-by-zerotrac2/
-// 来源：力扣（LeetCode）
-// 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
