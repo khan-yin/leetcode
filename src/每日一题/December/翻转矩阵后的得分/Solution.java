@@ -1,4 +1,4 @@
-package 图论专题.翻转矩阵后的得分;
+package 每日一题.December.翻转矩阵后的得分;
 
 public class Solution {
     public int matrixScore(int[][] A) {
