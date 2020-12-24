@@ -19,6 +19,5 @@ public class Solution {
             count += Math.max(left[i], right[i]);
         }
         return count;
-
     }
 }
