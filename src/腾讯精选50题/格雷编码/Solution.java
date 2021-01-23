@@ -10,6 +10,5 @@ public class Solution {
             gray.add(binary ^ binary >> 1);
         }
         return gray;
-
     }
 }
