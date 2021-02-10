@@ -17,9 +17,8 @@ struct node
     {
         return (x.dis<dis);
     }
+    
 };
-
-
 
 
 bool visit[100005];

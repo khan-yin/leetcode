@@ -30,6 +30,7 @@ inline void add(int from,int to,int dis)
     head[from]=cnt;
 }
 
+
 struct node
 {
     int dis;
