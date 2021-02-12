@@ -63,7 +63,7 @@ void dijstra(int start)
             {
                 dist[j] = dist[pos]+edge[i].dis;
                 if(!isvist[j])
-                    q.push(node{dist[j],j});
+                    q.push((node){dist[j],j});
             }
         }
     }
