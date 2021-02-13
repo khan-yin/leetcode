@@ -57,18 +57,11 @@ int main()
     isvisited[start]=true;
     for(int i=1;i<=n-1;i++)
     {
-        int minn=inf;
+        start=0;
         for(int j=1;j<=n;j++)
-        {   //选择最小边
-            if(!isvisited[j]&&dist[j]<minn)
-            {
+            if(!isvisited[j]&&dist[j]<dist[start])
                 start=j;
-                minn=dist[j];
-            }
-        }
-
         isvisited[start]=true;
-        // cout<<"s:"<<start<<endl;
         for(int j=1;j<=n;j++)
         {   //start加入后其相关边加入更新dist
             if(!isvisited[j]&&distmap[start][j]<dist[j])
