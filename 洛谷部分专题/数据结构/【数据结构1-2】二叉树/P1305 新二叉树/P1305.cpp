@@ -31,7 +31,7 @@ int main()
     int n;
     cin>>n;
     bool flag=true;
-    int first=0;
+    int first=0;//主要是为了确定根节点
     while(n--)
     {
         // getchar();
