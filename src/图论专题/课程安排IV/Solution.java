@@ -4,6 +4,6 @@ import java.util.List;
 
 public class Solution {
     public List<Boolean> checkIfPrerequisite(int n, int[][] prerequisites, int[][] queries) {
-
+    return null;
     }
 }
