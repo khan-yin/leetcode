@@ -29,7 +29,6 @@ bool cmp(Request a,Request b)
 }
 
 
-
 Request req[2005];
 vector<Request> res;
 // hh:mm:ss hh:mm:ss
