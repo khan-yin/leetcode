@@ -3,6 +3,7 @@
 #include<cstring>
 using namespace std;
 
+//双指针+hash
 class Solution {
 public:
     
