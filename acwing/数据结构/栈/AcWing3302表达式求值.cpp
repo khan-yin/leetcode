@@ -32,7 +32,7 @@ inline void eval()
 int main()
 {
     string s;
-    unordered_map<char,int> priority_map{{'+',1},{'-',1},{'*',2},{'/',2}}; //定义操作符的优先级
+    unordered_map<char,int> priority_map{{'+',1},{'-',1},{'*',2},{'/',2}}; //定义操作符的优先级,可以继续拓展运算符
     cin>>s;
     for(int i=0;i<s.size();i++)
     {
@@ -64,10 +64,10 @@ int main()
             op.push(c);
         }
     }
-    
+
     //栈内的剩余操作符的求值方法
     while(op.size()) eval();
-    
+
     cout<< num.top()<<endl;
     return 0;
 }
