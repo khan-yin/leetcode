@@ -67,6 +67,7 @@ int main()
         scanf("%d%d%d", &x, &y,&z);
         add(x,y,z);//对于邻接表可以不处理重边的问题
     }
+    
     cout<<dijkstra(1)<<endl;
     return 0;
 }
