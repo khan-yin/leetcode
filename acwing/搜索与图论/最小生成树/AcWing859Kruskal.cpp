@@ -54,6 +54,7 @@ int kruskal()
     return res;
 }
 
+
 int main()
 {
     scanf("%d%d", &n, &m);
