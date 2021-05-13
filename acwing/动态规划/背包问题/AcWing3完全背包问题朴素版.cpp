@@ -77,7 +77,6 @@ int v[N], w[N];
 
 int DP[N];
 
-
 int main()
 {
     int n,V;
