@@ -6,7 +6,7 @@ int b[510];
 int dp[510][510];//表示a[]前i和b[]前j个位置的最大连线数
 
 //a[i]==b[j], a[i]==b[j-1], a[i-1]==b[j],
-// dp[i-1][j-1] + 1 dp[i-1][j-2]+1 dp[i-2][j-1]+1 dp[i-1][j-1]
+// dp[i-1][j-1] + 1 dp[i-1][j-2]+1 dp[i-2][j-1]+1
 class Solution {
 public:
     int maxUncrossedLines(vector<int>& nums1, vector<int>& nums2) {
