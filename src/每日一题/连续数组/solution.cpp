@@ -1,5 +1,5 @@
 #include<vector>
-#include<algprithm>
+#include<algorithm>
 #include<unordered_map>
 using namespace std;
 class Solution {
