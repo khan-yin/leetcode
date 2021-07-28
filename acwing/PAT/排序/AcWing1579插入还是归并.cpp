@@ -1,3 +1,4 @@
+// PAT甲级真题1089
 #include <iostream>
 #include <cstring>
 #include <algorithm>
@@ -24,10 +25,10 @@ int main()
     cin>>n;
     for(int i=1;i<=n;i++) cin>>a[i]; 
     for(int i=1;i<=n;i++) cin>>b[i]; 
-    
+
     int p = 2;
     while(p<=n&&b[p-1]<=b[p]) p++;
-    
+
     int k = p;
     while(p<=n&&a[p]==b[p]) p++;
     if(p==n+1)
@@ -54,11 +55,8 @@ int main()
         }
         cout<<a[1];
         for(int i=2;i<=n;i++) cout<<" "<<a[i];
-        
+
     }
-    
-    
-    
-    
+
     return 0;
 }
