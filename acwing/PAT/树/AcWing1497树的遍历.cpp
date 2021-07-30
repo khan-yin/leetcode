@@ -12,7 +12,7 @@ int postorder[N];
 int inorder[N];
 int q[N];
 
-unordered_map<int,int> l,r,inorder_map;
+unordered_map<int,int> l,r,inorder_map; // 用map可以的原因是因为题中所给的节点权值各不相同
 
 int n;
 
