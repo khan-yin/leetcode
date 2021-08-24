@@ -13,7 +13,7 @@ public:
         dp[0][src] = 0;
         for(int len=1;len<=k+1;len++)
         {
-            for(auto&& item : flights)
+            for(auto& item : flights)
             {
                 int from = item[0];
                 int to = item[1];
